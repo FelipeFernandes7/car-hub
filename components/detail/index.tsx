@@ -45,7 +45,7 @@ export function CarDetail({ car, isOpen, closeModal }: CarDetailProps) {
                 <Dialog.Panel
                   className="relative w-full max-w-lg 
                   max-h[90vh] overflow-y-auto transform rounded-2xl
-                   bg-white p-6 text-left shadow-xl transition-all flex flex-col gap-5"
+                  bg-gray-900 p-6 text-left shadow-xl transition-all flex flex-col gap-5"
                 >
                   <button
                     className="absolute top-2 right-2 z-10 w-fit p-2
@@ -72,7 +72,7 @@ export function CarDetail({ car, isOpen, closeModal }: CarDetailProps) {
                       />
                     </div>
                     <div className="flex gap-3">
-                      <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+                      <div className="flex-1 relative w-full h-24 bg-gray-800 rounded-lg">
                         <Image
                           className="object-contain"
                           src={generateCarImageUrl(car, "29")}
@@ -81,7 +81,7 @@ export function CarDetail({ car, isOpen, closeModal }: CarDetailProps) {
                           fill
                         />
                       </div>
-                      <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+                      <div className="flex-1 relative w-full h-24  bg-gray-800 rounded-lg">
                         <Image
                           className="object-contain mt-5"
                           src={generateCarImageUrl(car, "33")}
@@ -90,7 +90,7 @@ export function CarDetail({ car, isOpen, closeModal }: CarDetailProps) {
                           fill
                         />
                       </div>
-                      <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+                      <div className="flex-1 relative w-full h-24 bg-gray-800 rounded-lg">
                         <Image
                           className="object-contain"
                           src={generateCarImageUrl(car, "13")}
@@ -103,7 +103,7 @@ export function CarDetail({ car, isOpen, closeModal }: CarDetailProps) {
                   </div>
 
                   <div className="flex-1 flex flex-col gap-2">
-                    <h2 className="font-semibold text-xl capitalize">
+                    <h2 className="font-semibold text-xl capitalize text-white">
                       {car.make} {car.make}
                     </h2>
                     <div className="mt-3 flex flex-wrap gap-4">
@@ -112,12 +112,10 @@ export function CarDetail({ car, isOpen, closeModal }: CarDetailProps) {
                           key={key}
                           className="flex justify-between gap-5 w-full text-right"
                         >
-                          <h4 className="text-grey capitalize">
+                          <h4 className="text-primary-blue-100 capitalize">
                             {key.split("_").join(" ")}
                           </h4>
-                          <p className="text-black-100 font-semibold">
-                            {value}
-                          </p>
+                          <p className="text-white font-semibold">{value}</p>
                         </div>
                       ))}
                     </div>

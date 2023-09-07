@@ -28,7 +28,9 @@ export function Button({
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
     >
-      <span className={`flex-1 ${textStyles}`}>{title}</span>
+      <span className={`flex-1 ${textStyles} transition-all active:scale-95`}>
+        {title}
+      </span>
       {rightIcon && (
         <div className="relative w-6 h-6">
           <Image

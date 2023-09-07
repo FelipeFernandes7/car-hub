@@ -4,7 +4,13 @@ import Image from "next/image";
 import { Button } from "../button";
 import hero from "../../public/hero.png";
 export function Hero() {
-  function handleScroll() {}
+  function handleScroll() {
+    const nextSection = document.getElementById("discover");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
@@ -16,6 +22,7 @@ export function Hero() {
         </p>
         <Button
           title="Explore cars"
+          handleClick={handleScroll}
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
         />
       </div>

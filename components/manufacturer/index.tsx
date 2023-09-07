@@ -8,13 +8,13 @@ import carLogo from "../../public/car-logo.svg";
 import { manufacturers } from "@/constants";
 
 interface SearchManufacturerProps {
-  manufacturer: string;
-  setManufacturer: Dispatch<SetStateAction<string>>;
+  selected: string;
+  setSelected: Dispatch<SetStateAction<string>>;
 }
 
 export function SearchManufacturer({
-  manufacturer,
-  setManufacturer,
+  selected,
+  setSelected,
 }: SearchManufacturerProps) {
   const [query, setQuery] = useState("");
 
@@ -30,7 +30,7 @@ export function SearchManufacturer({
 
   return (
     <div className="search-manufacturer">
-      <Combobox value={manufacturer} onChange={setManufacturer}>
+      <Combobox value={selected} onChange={setSelected}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
             <Image
@@ -43,8 +43,8 @@ export function SearchManufacturer({
           </Combobox.Button>
           <Combobox.Input
             className={"search-manufacturer__input"}
-            placeholder="Volkswagen"
-            displayValue={(manufacturer: string) => manufacturer}
+            placeholder="Volkswagen..."
+            displayValue={(item: string) => item}
             onChange={(e) => setQuery(e.target.value)}
           />
           <Transition

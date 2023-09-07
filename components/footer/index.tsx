@@ -5,8 +5,8 @@ import logo from "../../public/logo.svg";
 import { footerLinks } from "@/constants";
 export function Footer() {
   return (
-    <footer className="flex flex-col text-black-100 mt-5 border-t border-gray-100">
-      <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10">
+    <footer className="footer bg-gray-950">
+      <div className="footer__links-container">
         <div className="flex flex-col justify-start items-start gap-6">
           <Image
             src={logo}
@@ -15,7 +15,7 @@ export function Footer() {
             height={18}
             className="object-contain"
           />
-          <p className="text-base text-gray-700">
+          <p className="text-base text-gray-300">
             carhub 2023 All Rights Reserved &copy;
           </p>
         </div>
@@ -36,22 +36,22 @@ export function Footer() {
           ))}
         </div>
       </div>
-        <div
-          className="flex justify-between items-center 
+      <div
+        className="flex justify-between items-center 
         flex-wrap mt-10 border-t
-        border-gray-100 
+        border-gray-900 
         sm:px-16 px-6 py-10"
-        >
-          <p>@2023 carhub. All Rights Reserved &copy;</p>
-          <div className="footer__copyrights-link">
-            <Link href={"/"} className="text-gray-500">
-              Privacy policy
-            </Link>
-            <Link href={"/"} className="text-gray-500">
-              Terms of use
-            </Link>
-          </div>
+      >
+        <p>@2023 carhub. All Rights Reserved &copy;</p>
+        <div className="footer__copyrights-link">
+          <Link href={"/"} className="text-gray-500">
+            Privacy policy
+          </Link>
+          <Link href={"/"} className="text-gray-500">
+            Terms of use
+          </Link>
         </div>
+      </div>
     </footer>
   );
 }
