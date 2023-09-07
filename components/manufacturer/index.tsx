@@ -60,8 +60,8 @@ export function SearchManufacturer({
                   key={item}
                   value={item}
                   className={({ active }) =>
-                    `relative search-manufacturer__option ${
-                      active ? "bg-primary-blue text-white" : "text-gray-900"
+                    `relative search-manufacturer__option bg-gray-900 ${
+                      active ? "bg-primary-blue text-white" : "text-gray-200"
                     }`
                   }
                 >
