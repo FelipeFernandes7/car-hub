@@ -49,7 +49,10 @@ export default function Home() {
       <Hero />
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
-          <h1 className=" text-4xl font-extrabold text-gray-200"> Car Catalogue</h1>
+          <h1 className=" text-4xl font-extrabold text-gray-200">
+            {" "}
+            Car Catalogue
+          </h1>
           <p className="text-gray-200">Explore the cars you might like</p>
         </div>
         <div className="home__filters">
@@ -85,8 +88,8 @@ export default function Home() {
           </section>
         ) : (
           <div className="home__error-container">
-            <h2 className="text-black text-xl font-bold">Oops, no results </h2>
-            <p>{allCars.message}</p>
+            <h2 className="text-white text-xl font-bold">Oops, no results </h2>
+            <p className="text-white">{allCars.message}</p>
           </div>
         )}
       </div>
