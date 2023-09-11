@@ -92,10 +92,8 @@ export const footerLinks = [
   {
     title: "Socials",
     links: [
-      { title: "Discord", url: "/" },
-      { title: "Instagram", url: "/" },
-      { title: "Twitter", url: "/" },
-      { title: "Facebook", url: "/" },
+      { title: "Instagram", url: "https://www.instagram.com/felipe_fernandes7/" },
+      { title: "Facebook", url: "https://www.facebook.com/L.FelipeFernandes7/" },
     ],
   },
 ];
